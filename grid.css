@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 4px solid #FFFFFF;
+  align-self: center;
+  background: #000428;  
+  background: -webkit-linear-gradient(to right, #004e92, #000428); 
+  background: linear-gradient(to right, #004e92, #000428); 
+  box-shadow: 16px 12px 28px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 16px 12px 28px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 16px 12px 28px 0px rgba(0,0,0,0.75);
+
+}
+
+/* Clearfix */
+.row::before,
+.row::after {
+  display: table;
+  content: '';
+}
+
+.row::after {
+  clear: both;
+}
+
+.col-3, .col-4, .col-6, .col-8, .col-12 {
+  float: left;
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+}
+
+/* Mobile defaults */
+.col-3, .col-4, .col-6, .col-8, .col-12 {
+  width: 100%;
+}
+
+
+/* Non-mobile, grid */
+@media only screen and (min-width: 640px) {
+  .col-3 {
+    width: 25%;
+      }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-8 {
+    width: 66.67%;
+  }
+
+ .col-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  h2 {
+    font-size: 24px;
+  }
+  label {
+    padding: 0 20px;
+  }
+  .option-input {
+    width: 20px;
+    height: 20px;
+    top: 0;
+  }
+  .option-input:checked {
+    border: 5px solid #FFBF00;
+  }
+  button, .js-restart-button {
+    width: 200px;
+    font-size: smaller;
+  } 
+}
+
